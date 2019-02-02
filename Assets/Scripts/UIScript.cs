@@ -16,10 +16,9 @@ public class UIScript : MonoBehaviour {
         hypothesisTextBox = GameObject.FindGameObjectWithTag("Hypothesis").GetComponent<Text>();
 	}
 	
-	void Update () {
-
+	void Update ()
+    {
         spellTextBox.GetComponent<Text>().text = spell;
         hypothesisTextBox.GetComponent<Text>().text = hypothesis;
-
     }
 }
