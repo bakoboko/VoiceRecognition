@@ -24,6 +24,12 @@ public class VoiceRecognitionScript : MonoBehaviour
         dictationRecognizer.Start();
     }
 
+    private void OnDestroy()
+    {
+
+        dictationRecognizer.Stop();
+    }
+
 
     void Update ()
     {
@@ -51,7 +57,6 @@ public class VoiceRecognitionScript : MonoBehaviour
     void WriteString()
     {
         heldString = UIScript.hypothesis;
-
         button.GetComponent<Image>().color = Color.green;
         string path = "Assets/ListOfWords.txt";
 
